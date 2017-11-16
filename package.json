@@ -30,7 +30,10 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "immutable": "^3.8.2",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   }
 }

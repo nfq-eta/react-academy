@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
 
@@ -58,3 +59,12 @@ export default class App extends React.Component {
     );
   }
 }
+
+const mapStateToProps = () => ({});
+
+const mapDispatchToProps = () => ({});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
