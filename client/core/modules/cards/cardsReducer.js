@@ -5,8 +5,8 @@ const initialState = Map({});
 
 const cards = (state = initialState, action) => {
   switch (action.type) {
-    // case constants.cards:
-    //   return state;
+    case constants.cards.ADD:
+      return state.setIn(['main'], action.payload.card);
 
     default:
       return state;

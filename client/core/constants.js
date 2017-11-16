@@ -1,3 +1,5 @@
 export const constants = {
-  cards: {}
+  cards: {
+    ADD: 'card.ADD'
+  }
 };
