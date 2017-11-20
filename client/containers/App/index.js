@@ -9,6 +9,7 @@ class App extends React.Component {
     super();
 
     this.onRemoveAllCards = this.onRemoveAllCards.bind(this);
+    this.onAddCard = this.onAddCard.bind(this);
 
     this.state = {
       cards: [
@@ -20,6 +21,9 @@ class App extends React.Component {
     this.setState({
       cards: []
     })
+  }
+  onAddCard(value) {
+    this.props.onAddCard(value)
   }
   render() {
     return (
@@ -37,7 +41,7 @@ class App extends React.Component {
           </div>
 
           <div className="play-area__actions">
-            <Button title="Add card" click={() => this.props.onAddCard({ value: 1 })}/>
+            <Button title="Add card" click={() => this.onAddCard({ value: 1 })}/>
             <Button title="Remove cards" click={this.onRemoveAllCards}/>
           </div>
 
@@ -52,10 +56,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onAddCard: (card) => dispatch(addCard(card))
+  // onAddCard: (card) => dispatch(addCard(card))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(App);
+
+export { App as AppDisconnected };
