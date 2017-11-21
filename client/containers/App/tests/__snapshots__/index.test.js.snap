@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App match a snapshot 1`] = `
+<div
+  className="app-container"
+>
+  <div
+    className="play-area"
+  >
+    <div
+      className="play-area-cards"
+    >
+      <div
+        className="play-area-cards__deck"
+      >
+        <Card
+          deck={true}
+          value={52}
+        />
+      </div>
+      <div
+        className="play-area-cards__items"
+      >
+        5
+      </div>
+    </div>
+    <div
+      className="play-area__actions"
+    >
+      <Button
+        title="Add card"
+      />
+      <Button
+        click={[Function]}
+        title="Remove cards"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App match a snapshot 2 1`] = `
+<div
+  className="app-container"
+>
+  <div
+    className="play-area"
+  >
+    <div
+      className="play-area-cards"
+    >
+      <div
+        className="play-area-cards__deck"
+      >
+        <Card
+          deck={true}
+          value={52}
+        />
+      </div>
+      <div
+        className="play-area-cards__items"
+      />
+    </div>
+    <div
+      className="play-area__actions"
+    >
+      <Button
+        title="Add card"
+      />
+      <Button
+        click={[Function]}
+        title="Remove cards"
+      />
+    </div>
+  </div>
+</div>
+`;

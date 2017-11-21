@@ -37,7 +37,7 @@ class App extends React.Component {
           </div>
 
           <div className="play-area__actions">
-            <Button title="Add card" click={() => this.props.onAddCard({ value: 1 })}/>
+            <Button title="Add card" click={this.handleClick}/>
             <Button title="Remove cards" click={this.onRemoveAllCards}/>
           </div>
 
@@ -51,11 +51,9 @@ const mapStateToProps = state => ({
   main: state.cards.getIn(['main'])
 });
 
-const mapDispatchToProps = dispatch => ({
-  onAddCard: (card) => dispatch(addCard(card))
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+    { onAddCard: addCard },
 )(App);
+
+export { App as AppDisconnected };
