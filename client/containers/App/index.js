@@ -21,6 +21,9 @@ class App extends React.Component {
       cards: []
     })
   }
+  handleClick() {
+      this.props.onAddCard({ value: 1 });
+  }
   render() {
     return (
       <div className="app-container">

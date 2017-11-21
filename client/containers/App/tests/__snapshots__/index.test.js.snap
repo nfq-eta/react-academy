@@ -28,6 +28,7 @@ exports[`App match a snapshot 1`] = `
       className="play-area__actions"
     >
       <Button
+        click={[Function]}
         title="Add card"
       />
       <Button
@@ -65,6 +66,7 @@ exports[`App match a snapshot 2 1`] = `
       className="play-area__actions"
     >
       <Button
+        click={[Function]}
         title="Add card"
       />
       <Button

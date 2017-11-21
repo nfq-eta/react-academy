@@ -44,6 +44,13 @@ describe('App', () => {
         expect(wrapper.state()).toEqual({ cards: [ { value: 1 } ] });
     });
 
+    it('calls function from props', () => {
+        const mock = jest.fn();
+        wrapper = shallow(<App onAddCard={mock} />);
+        wrapper.instance().handleClick();
+        expect(mock).toHaveBeenCalledWith({"value": 1});
+    })
+
 });
 
 
