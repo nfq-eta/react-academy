@@ -1,12 +1,12 @@
-import { Map } from 'immutable';
+import { List } from 'immutable';
 import { constants } from '../../constants';
 
-const initialState = Map({});
+const initialState = List([]);
 
 const cards = (state = initialState, action) => {
   switch (action.type) {
     case constants.cards.ADD:
-      return state.setIn(['main'], action.payload.card);
+      return state.push(action.payload.card);
 
     default:
       return state;
