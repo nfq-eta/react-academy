@@ -8,6 +8,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+        <div className="score won">
+          Your won with 12!
+          <Button title="Restart" click={() => null}/>
+        </div>
+
+        <div className="results">Your score: <span className="results__number">12</span></div>
+
         <div className="play-area">
 
           <div className="play-area-cards">
@@ -27,7 +34,7 @@ class App extends React.Component {
 
           <div className="play-area__actions">
             <Button title="Add card" click={() => this.props.onRequestCard()}/>
-            <Button title="Remove cards" click={this.onRemoveAllCards}/>
+            <Button title="Stop" className="is-success" click={() => null}/>
           </div>
 
         </div>

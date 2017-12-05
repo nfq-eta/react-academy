@@ -3,7 +3,9 @@ import { constants } from '../../constants';
 export const requestCard = () => {
   return {
     type: constants.cards.REQUEST,
-    payload: {}
+    payload: {
+      limit: 2
+    }
   }
 };
 

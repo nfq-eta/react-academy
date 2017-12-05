@@ -8,18 +8,16 @@ const rootReducer = combineReducers({
 export default rootReducer;
 
 const store = {
-  session: {
-    cards: [
-      {
-        image: 'https://deckofcardsapi.com/static/img/KH.png',
-        value: '10'
-      },
-      {
-        image: 'https://deckofcardsapi.com/static/img/8C.png',
-        value: '8'
-      },
-    ],
-    score: 18,
-    ended: false
-  }
+  cards: [
+    {
+      image: 'https://deckofcardsapi.com/static/img/KH.png',
+      value: '10'
+    },
+    {
+      image: 'https://deckofcardsapi.com/static/img/8C.png',
+      value: '8'
+    },
+  ],
+  score: 18,
+  ended: false
 };
