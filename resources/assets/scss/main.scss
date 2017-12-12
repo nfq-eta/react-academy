@@ -184,3 +184,7 @@ body {
   top: calc(50% - 13px);
   z-index: 1;
 }
+
+[disabled] {
+  opacity: 0.5;
+}

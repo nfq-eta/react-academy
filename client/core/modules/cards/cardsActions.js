@@ -1,10 +1,10 @@
 import { constants } from '../../constants';
 
-export const requestCard = () => {
+export const requestCard = cardCount => {
   return {
     type: constants.cards.REQUEST,
     payload: {
-      limit: 2
+      cardCount
     }
   }
 };
