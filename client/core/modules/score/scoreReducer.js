@@ -7,6 +7,9 @@ const score = (state = initialState, action) => {
     case constants.score.SET:
       return action.payload.score;
 
+    case constants.session.RESTART:
+      return initialState;
+
     default:
       return state;
   }

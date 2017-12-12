@@ -8,6 +8,9 @@ const session = (state = initialState, action) => {
     case constants.session.END:
       return state.setIn(['ended'], true);
 
+    case constants.session.RESTART:
+      return state.setIn(['ended'], false);
+
     default:
       return state;
   }

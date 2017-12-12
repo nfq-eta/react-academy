@@ -14,5 +14,6 @@ export const constants = {
   },
   session: {
     END: 'session.END',
+    RESTART: 'session.RESTART',
   }
 };
