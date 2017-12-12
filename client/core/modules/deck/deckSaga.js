@@ -17,5 +17,6 @@ function* onCreateDeck() {
 export default function* deckSaga() {
   yield all([
     takeLatest(constants.deck.CREATE, onCreateDeck),
+    takeLatest(constants.session.RESTART, onCreateDeck),
   ]);
 }

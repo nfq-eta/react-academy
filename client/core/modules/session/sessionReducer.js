@@ -6,7 +6,9 @@ const initialState = Map({});
 const session = (state = initialState, action) => {
   switch (action.type) {
     case constants.session.END:
-      return state.setIn(['ended'], true);
+      return state.set('ended', true);
+    case constants.session.RESTART:
+      return initialState;
 
     default:
       return state;
