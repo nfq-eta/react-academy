@@ -17,3 +17,13 @@ export const addCard = (card) => {
     }
   }
 };
+
+export const replaceCard = (index, updateData) => {
+  return {
+    type: constants.cards.REPLACE,
+    payload: {
+      index,
+      updateData,
+    }
+  }
+};

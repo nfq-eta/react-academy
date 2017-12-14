@@ -1,13 +1,14 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import App from './containers/App';
+import history from './core/history';
+import Root from './containers/Root';
 import configureStore from './core/store/configureStore';
 import '../resources/assets/scss/main.scss';
 
-const store = configureStore();
+const store = configureStore(history);
 
 render(
-  <App store={store}/>,
+  <Root store={store} history={history} />,
   document.getElementById('app')
 );

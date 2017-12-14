@@ -2,7 +2,8 @@ export const constants = {
   cards: {
     CREATE_DECK: 'card.CREATE_DECK',
     REQUEST: 'card.REQUEST',
-    ADD: 'card.ADD'
+    ADD: 'card.ADD',
+    REPLACE: 'card.REPLACE'
   },
   deck: {
     CREATE: 'deck.CREATE',

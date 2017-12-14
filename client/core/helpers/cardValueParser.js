@@ -6,7 +6,7 @@ export const getCardNumberValue = value => {
       return 10;
 
     case 'ACE':
-      return 1;
+      return 11;
 
     default:
       return parseInt(value);

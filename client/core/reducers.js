@@ -1,3 +1,4 @@
+import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
 import cards from './modules/cards/cardsReducer';
 import score from './modules/score/scoreReducer';
@@ -5,6 +6,7 @@ import deck from './modules/deck/deckReducer';
 import session from './modules/session/sessionReducer';
 
 const rootReducer = combineReducers({
+  routing,
   score,
   cards,
   session,
