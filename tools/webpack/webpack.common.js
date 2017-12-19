@@ -18,7 +18,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, '../../public'),
-        publicPath: './',
+        publicPath: '/',
         filename: 'client.min.js',
         sourceMapFilename: '[name].map'
     },

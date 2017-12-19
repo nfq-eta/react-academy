@@ -15,7 +15,51 @@ body {
   width: 100%;
   height: 100%;
   display: table;
-  background: radial-gradient(ellipse at center, #ac4b4c 0%,#8e282c 100%);
+  background: #222;
+
+  &[data-player="1"] {
+    background: radial-gradient(ellipse at center, #c55657 0%, #8e282c 100%);
+  }
+
+  &[data-player="2"] {
+    background: radial-gradient(ellipse at center, #2f70d1 0%, #1a3d72 100%);
+  }
+
+  &[data-player="3"] {
+    background: radial-gradient(ellipse at center, #1da364 0%, #147246 100%);
+  }
+
+  &[data-player="4"] {
+    background: radial-gradient(ellipse at center, #a38957 0%, #726a19 100%);
+  }
+}
+
+input {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+  background: white;
+  box-shadow: none;
+  padding: 0 15px;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 10px;
+  min-width: 100px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #3ecc70;
+  border: 1px solid #3ecc70;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .app-container {
@@ -24,13 +68,20 @@ body {
 }
 
 .score {
-  display: block;
-  height: 120px;
-  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(22, 22, 22, 0.9);
   color: white;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
+  z-index: 9999;
 
   button {
     display: block;
@@ -47,6 +98,13 @@ body {
     transition: 0.3s ease-in-out;
     white-space: nowrap;
   }
+}
+
+.score-wrap {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .results {
@@ -73,7 +131,8 @@ body {
 }
 
 .play-area-cards__items {
-  width: calc(100% - 235px);
+  min-height: 151px;
+  width: 100%;
   display: inline-block;
   text-align: center;
 }
@@ -84,6 +143,7 @@ body {
 
 .play-area__actions button {
   min-width: 100px;
+  display: inline-block;
   padding: 10px;
   margin: 0 7px;
   text-transform: uppercase;
@@ -131,24 +191,7 @@ body {
   color: white;
   text-align: center;
   vertical-align: top;
-  -webkit-perspective: 800;
-  -moz-perspective: 800;
-  -o-perspective: 800;
-  perspective: 800;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
-}
-
-.card:after {
-  width: 100px;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 5px;
-  bottom: 5px;
-  background: rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover:after {
@@ -158,8 +201,8 @@ body {
   box-shadow: 10px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.card:hover .card__image {
-  transform: rotateY(-60deg);
+.card:hover .card__value {
+  transform: translate3d(0, 50px, 0);
 }
 
 .card__image {
@@ -167,6 +210,8 @@ body {
   width: 100%;
   display: block;
   padding-bottom: 140%;
+  background-color: white;
+  border-radius: 7px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -180,11 +225,70 @@ body {
   line-height: 26px;
   font-weight: bold;
   position: absolute;
-  right: 0px;
-  top: calc(50% - 13px);
+  right: 0;
+  left: 0;
+  text-align: center;
+  bottom: 15px;
   z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 [disabled] {
   opacity: 0.5;
+}
+
+.player-scores {
+  width: calc(100% - 30px);
+  position: absolute;
+  bottom: 15px;
+  margin: 0 15px;
+  height: 150px;
+  color: white;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.player-scores-item {
+  max-width: 100px;
+  padding-right: 30px;
+  float: left;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: 15px;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 14px;
+  padding-right: 15px;
+
+  &:first-child {
+    width: 1%;
+    white-space: nowrap;
+    padding: 3px 15px;
+  }
+}
+
+.info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+
+  span {
+    margin-right: 30px;
+  }
+}
+
+.quit {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-weight: bold;
 }

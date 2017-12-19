@@ -13,14 +13,25 @@ class Session extends React.Component {
   render() {
     return (
       <div>
+        <div className="info">
+          <span>Player: 1</span>
+          <span>Game: 1</span>
+        </div>
+
+        <div className="quit">
+          Quit
+        </div>
+
         {this.props.sessionEnded ?
           <div className="score">
-            {this.props.score <= 21 ?
-              <span>You won with {this.props.score}!</span>
-              :
-              <span>You lost with {this.props.score}!</span>
-            }
-            <Button title="Restart" click={() => this.props.onRestartSession()}/>
+            <div className="score-wrap">
+              {this.props.score <= 21 ?
+                <span>You won with {this.props.score}!</span>
+                :
+                <span>You lost with {this.props.score}!</span>
+              }
+              <Button title="Restart" click={() => this.props.onRestartSession()}/>
+            </div>
           </div>
           : null
         }
@@ -32,10 +43,6 @@ class Session extends React.Component {
         <div className="play-area">
 
           <div className="play-area-cards">
-            <div className="play-area-cards__deck">
-              <Card deck value={52}/>
-            </div>
-
             <div className="play-area-cards__items">
               {this.props.cards ?
                 this.props.cards.map((card, i) => (
@@ -60,6 +67,31 @@ class Session extends React.Component {
             />
           </div>
 
+        </div>
+
+        <div className="player-scores">
+          <div className="player-scores-item">
+            <table>
+              <thead>
+              <tr>
+                <th>
+                  Game 1
+                </th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>Player 1:</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>Player 2:</td>
+                <td>13</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
