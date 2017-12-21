@@ -11,7 +11,7 @@ const cards = (state = initialState, action) => {
     case constants.cards.REPLACE:
       return state.update(action.payload.index, () => action.payload.updateData);
 
-    case constants.session.RESTART:
+    case constants.cards.RESET:
       return initialState;
 
     default:

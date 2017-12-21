@@ -292,3 +292,54 @@ td {
   color: white;
   font-weight: bold;
 }
+
+.change-values {
+  margin-bottom: 30px;
+  color: white;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.change-values__title {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.change-values__increase,
+.change-values__decrease {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+
+.change-values__decrease {
+  background-color: #ff6600;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#ff6600, 10%);
+  }
+}
+
+.change-values__increase {
+  background-color: #3ecc70;
+
+  &:hover,
+  &:focus {
+    background-color: darken(#3ecc70, 10%);
+  }
+}
+
+.change-values__value {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: middle;
+}

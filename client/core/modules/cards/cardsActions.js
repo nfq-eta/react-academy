@@ -27,3 +27,11 @@ export const replaceCard = (index, updateData) => {
     }
   }
 };
+
+
+export const resetCards = () => {
+  return {
+    type: constants.cards.RESET,
+    payload: {}
+  }
+};

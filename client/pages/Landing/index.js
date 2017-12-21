@@ -4,14 +4,27 @@ import Button from '../../components/Button';
 import history from '../../core/history';
 
 class Landing extends React.Component {
+  componentWillMount() {
+
+  }
   render() {
     return (
       <div className="play-area__actions">
-        <Button
-          title="Start game"
-          className="is-success"
-          click={() => history.push('/session')}
-        />
+        <div style={{marginBottom: '10px'}}>
+          <Button
+            title="Start game"
+            className="is-success"
+            click={() => history.push('/session')}
+          />
+        </div>
+
+        <div>
+          <Button
+            title="Settings"
+            className="is-success"
+            click={() => history.push('/settings')}
+          />
+        </div>
       </div>
     );
   }

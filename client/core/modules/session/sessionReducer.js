@@ -11,6 +11,12 @@ const session = (state = initialState, action) => {
     case constants.session.RESTART:
       return state.setIn(['ended'], false);
 
+    case constants.session.SET_ACTIVE_PLAYER:
+      return state.setIn(['activePlayer'], action.payload.player);
+
+    case constants.session.SET_ACTIVE_GAME:
+      return state.setIn(['activeGame'], action.payload.game);
+
     default:
       return state;
   }
