@@ -5,6 +5,7 @@ import { Home } from './home';
 import { GenreNotSelected } from './genre-not-selected';
 import { Genre } from './genre';
 import { Movie } from './movie';
+import { List } from './list';
 
 class App extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class App extends React.Component {
               <Home />
               {/*<GenreNotSelected />*/}
               {/*<Genre />*/}
+              {/*<List />*/}
               {/*<Movie />*/}
             </div>
 
