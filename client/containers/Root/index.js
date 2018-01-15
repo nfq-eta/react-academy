@@ -3,9 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import App from '../App';
-import Landing from '../../pages/Landing';
-import Session from '../../pages/Session';
-import Settings from '../../pages/Settings';
+import AllPages from '../AllPages';
 
 const Root = ({ store, history }) => (
   <BrowserRouter>
@@ -13,10 +11,7 @@ const Root = ({ store, history }) => (
       <ConnectedRouter history={history}>
         <App>
           <Switch>
-            <Route path="/" exact={true} component={Landing}/>
-            <Route path="/session" exact={true} component={Session}/>
-            <Route path="/settings" exact={true} component={Settings}/>
-            <Route component={() => <div>Not found 404</div>}/>
+            <Route path="/" component={AllPages}/>
           </Switch>
         </App>
       </ConnectedRouter>
