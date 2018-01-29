@@ -1,13 +1,16 @@
-FROM node:8.7-alpine
+FROM node:8.7
 
 RUN mkdir -p /usr/src/client
-
 WORKDIR /usr/src/client
 
-# Prevent the reinstallation of node modules at every changes in the source code
-COPY package.json yarn.lock ./
-RUN yarn install
+RUN apt-get update && apt-get install sudo
 
-COPY . ./
+RUN usermod -u 1000 node \
+    && groupmod -g 1000 node \
+    && chsh -s /bin/bash node \
+    && echo "node ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-node \
+    && chown -R 1000:1000 /usr/src/client
 
-CMD yarn start
+USER node
+
+CMD npm install && printf "\n\n</> Project started </>\n" && tail -f /dev/null

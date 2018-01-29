@@ -22,5 +22,11 @@ export default function configureStore(history, initialState) {
 
   sagaMiddleware.run(rootSaga);
 
+  if (module.hot) {
+    module.hot.accept('../../reducers.js', () => {
+      store.replaceReducer(require('../../reducers.js').default);
+    });
+  }
+
   return store;
 }

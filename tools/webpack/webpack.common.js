@@ -14,7 +14,9 @@ module.exports = {
 
     context: path.resolve(__dirname, '../../client'),
 
-    entry: './index.js',
+    entry: {
+        app: './index.js'
+    },
 
     output: {
         path: path.resolve(__dirname, '../../public'),
