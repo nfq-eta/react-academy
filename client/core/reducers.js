@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import cards from './modules/cards/cardsReducer';
+import todo from './modules/todo/todoReducer';
 
 const rootReducer = combineReducers({
-  cards
+  todo
 });
 
 export default rootReducer;
