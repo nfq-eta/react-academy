@@ -3,6 +3,9 @@ import { constants } from '../../../core/constants';
 
 function* onRequestCard() {
   const state = yield select();
+
+  // put - tas pats, kas dispatch
+  // call - requestinti f-jas, generatorius, requestus
 }
 
 export default function* sessionSaga() {
