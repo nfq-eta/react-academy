@@ -1,5 +1,6 @@
 # production
 /public
+/styleguide
 /flow-typed/npm
 /.eslintcache
 /coverage/

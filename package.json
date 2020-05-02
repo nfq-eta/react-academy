@@ -22,8 +22,10 @@
     "lint": "eslint client/",
     "lint:fix": "yarn lint --fix",
     "postinstall": "yarn flow:update",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --content-base build --env=dev",
-    "build": "rimraf ./public/* && cross-env NODE_ENV=production webpack --env=prod"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --content-base build --env=development",
+    "build": "rimraf ./public/* && cross-env NODE_ENV=production webpack --env=production",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "cross-env NODE_ENV=production styleguidist build"
   },
   "lint-staged": {
     "client/**/*.{js,jsx}": [
@@ -76,6 +78,7 @@
     "lint-staged": "^10.2.2",
     "postcss-loader": "^3.0.0",
     "prettier": "2.0.5",
+    "react-styleguidist": "11.0.5",
     "react-test-renderer": "^16.2.0",
     "rimraf": "^3.0.2",
     "sass": "1.26.5",
