@@ -1,18 +1,19 @@
 // @flow
+
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 import {Home} from './home';
-// import {GenreNotSelected} from './genre-not-selected';
-// import {Genre} from './genre';
-// import {Movie} from './movie';
-// import {List} from './list';
+import {GenreNotSelected} from './genre-not-selected';
+import {Genre} from './genre';
+import {Movie} from './movie';
+import {List} from './list';
 
 interface IAppProps {
   children?: React.Node;
 }
 
-const App = (props: IAppProps) => (
+const App = ({children}: IAppProps) => (
   <div
     className="app-image"
     style={{
@@ -29,7 +30,7 @@ const App = (props: IAppProps) => (
           <div className="header__action">Genres</div>
           <div className="header__action is-active">Most popular</div>
           <div className="header__action">Top rated</div>
-          <div className="header__action">Upcomming</div>
+          <div className="header__action">Upcoming</div>
 
           <div className="header-search">
             <input type="text" className="header-search__input" />
@@ -40,16 +41,15 @@ const App = (props: IAppProps) => (
         </div>
 
         <div className="container-fluid">
-          {/* Pages */}
-
+          Pages
           <Home />
-          {/* <GenreNotSelected /> */}
-          {/* <Genre /> */}
-          {/* <List /> */}
-          {/* <Movie /> */}
+          <GenreNotSelected />
+          <Genre />
+          <List />
+          <Movie />
         </div>
 
-        {props.children}
+        {children}
       </div>
     </div>
   </div>

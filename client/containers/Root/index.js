@@ -3,13 +3,13 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import {ConnectedRouter} from 'react-router-redux';
+import {ConnectedRouter} from 'connected-react-router';
 import App from '../App';
 import AllPages from '../AllPages';
 
 interface IRootProps {
   history: History;
-  store: any;
+  store: {};
 }
 const Root = ({store, history}: IRootProps) => (
   <BrowserRouter>

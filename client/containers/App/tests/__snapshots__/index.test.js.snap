@@ -20,7 +20,6 @@ exports[`App match a snapshot 1`] = `
       >
         <Link
           className="header__logo"
-          replace={false}
           to="/"
         >
           MOVIES
@@ -43,7 +42,7 @@ exports[`App match a snapshot 1`] = `
         <div
           className="header__action"
         >
-          Upcomming
+          Upcoming
         </div>
         <div
           className="header-search"
@@ -64,7 +63,12 @@ exports[`App match a snapshot 1`] = `
       <div
         className="container-fluid"
       >
+        Pages
         <Home />
+        <GenreNotSelected />
+        <Genre />
+        <List />
+        <Movie />
       </div>
     </div>
   </div>

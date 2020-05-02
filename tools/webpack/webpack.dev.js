@@ -1,4 +1,5 @@
-const webpack = require('webpack');
+/* eslint-disable import/no-extraneous-dependencies */
+// @flow
 const Merge = require('webpack-merge');
 const CommonConfig = require('./webpack.common.js');
 

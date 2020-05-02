@@ -18,13 +18,16 @@ export class Rating extends React.Component<IRatingProps, IRatingState> {
       score: 0,
     };
   }
+
   componentDidMount() {
+    const {score} = this.props;
     setTimeout(() => {
       this.setState({
-        score: this.props.score,
+        score,
       });
     }, 100);
   }
+
   render() {
     const {score} = this.state;
 

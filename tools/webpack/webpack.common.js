@@ -1,4 +1,5 @@
-const webpack = require('webpack');
+/* eslint-disable import/no-extraneous-dependencies */
+// @flow
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -32,9 +33,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              presets: [['es2015', {loose: true, modules: false}], 'react'],
-            },
           },
         ],
       },
