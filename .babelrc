@@ -1,14 +1,12 @@
 {
+  "plugins": ["babel-plugin-styled-components"],
   "presets": [
-    [
-      "es2015",
-      {
-        "es2015": {
-          "loose": true,
-          "modules": false
-        }
-      }
-    ],
-    "react"
+    "react-app",
+    ["env", {
+      "targets": {
+        "node": "current",
+        "browsers": ["last 2 versions"]
+      },
+    }]
   ]
 }

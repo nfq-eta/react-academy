@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App match a snapshot 1`] = `
+<div
+  className="app-image"
+  style={
+    Object {
+      "backgroundImage": "url('https://image.tmdb.org/t/p/original/AdYJMNhcXVeqjRenSHP88oaLCaC.jpg')",
+    }
+  }
+>
+  <div
+    className="app-colors"
+  >
+    <div
+      className="app-container"
+    >
+      <div
+        className="header"
+      >
+        <Link
+          className="header__logo"
+          replace={false}
+          to="/"
+        >
+          MOVIES
+        </Link>
+        <div
+          className="header__action"
+        >
+          Genres
+        </div>
+        <div
+          className="header__action is-active"
+        >
+          Most popular
+        </div>
+        <div
+          className="header__action"
+        >
+          Top rated
+        </div>
+        <div
+          className="header__action"
+        >
+          Upcomming
+        </div>
+        <div
+          className="header-search"
+        >
+          <input
+            className="header-search__input"
+            type="text"
+          />
+          <div
+            className="header-search__button"
+          >
+            <i
+              className="fa fa-search"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="container-fluid"
+      >
+        <Home />
+      </div>
+    </div>
+  </div>
+</div>
+`;

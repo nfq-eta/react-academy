@@ -1,0 +1,7 @@
+{
+  "extends": ["eslint-config-with-prettier"],
+  "rules": {
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
+    "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "" ] }]
+  }
+}

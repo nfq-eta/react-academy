@@ -10,7 +10,7 @@ services:
             - .:/usr/src/client:rw
             - /usr/src/client/node_modules
         ports:
-            - "8081:3000"
+            - "5579:5579"
 
 volumes:
     db-data: {}

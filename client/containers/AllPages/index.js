@@ -1,9 +1,5 @@
 import React from 'react';
 
-const AllPages = (props) => (
-  <div>
-
-  </div>
-);
+const AllPages = () => <div />;
 
 export default AllPages;
