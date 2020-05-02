@@ -1,5 +1,10 @@
 {
-  "extends": ["eslint-config-with-prettier"],
+  "extends": [
+    "eslint-config-with-prettier",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
   "rules": {
     "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
     "jsx-a11y/anchor-is-valid": [ "error", { "components": [ "" ] }]

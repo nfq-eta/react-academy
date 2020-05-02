@@ -1,16 +1,13 @@
-# dependencies
-/node_modules
-
 # production
 /public
-
-### JetBrains ###
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-
-# User-specific stuff:
-.idea/
-
-/*.log
 /flow-typed/npm
 /.eslintcache
 /coverage/
+.idea/
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
